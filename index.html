@@ -1,320 +1,312 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<title>Yigal Pesahov Films — Director & Cinematographer</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<title>Yigal Pesahov Films — International Cinematic Filmmaker</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- Tailwind -->
 <script src="https://cdn.tailwindcss.com"></script>
 
-<!-- Gold Theme -->
+<style>
+    body { background: #000; color: #fff; font-family: serif; }
+    .gold { color: #D4AF37; }
+
+    /* Fade animation */
+    .fade { opacity: 0; transform: translateY(20px); animation: fadeIn 1s ease forwards; }
+    @keyframes fadeIn { to { opacity:1; transform:translateY(0); } }
+
+    /* 4 in row grid */
+    .thumb-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0;
+    }
+    @media (max-width:1024px) { .thumb-grid { grid-template-columns:repeat(2, 1fr); } }
+    @media (max-width:600px) { .thumb-grid { grid-template-columns:repeat(1, 1fr); } }
+
+    /* Thumbnail styling */
+    .thumb {
+        aspect-ratio: 16 / 9;
+        position: relative;
+        cursor: pointer;
+        overflow: hidden;
+    }
+    .thumb img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.85;
+        transition: 0.3s ease;
+    }
+    .thumb:hover img { opacity: 1; }
+</style>
+
 <script>
-tailwind.config = {
-theme: {
-extend: {
-colors: {
-gold: "#D4AF37",
-deep: "#0A0A0A"
-},
-fontFamily: {
-serif: ["Cormorant Garamond", "serif"],
-sans: ["Inter", "sans-serif"]
-}
-}
-}
+// Replace thumbnail with iframe
+function loadVideo(id, src) {
+    document.getElementById(id).innerHTML =
+        `<iframe src="${src}" frameborder="0" allow="autoplay; fullscreen"
+         class="w-full h-full"></iframe>`;
 }
 </script>
 
-<!-- Remove scrollbars -->
-<style>
-::-webkit-scrollbar { display:none; }
-.video-thumb iframe { width:100%; height:100%; }
-</style>
 </head>
+<body>
 
-<body class="bg-deep text-white font-sans">
-
-<!-- NAVBAR -->
-<header class="fixed top-0 left-0 right-0 z-50 bg-black/70 backdrop-blur-md border-b border-gold/20">
-    <div class="max-w-7xl mx-auto px-8 py-6 flex items-center justify-between">
-        <div class="text-2xl font-serif tracking-wider text-gold">
-            YIGAL PESAHOV
-        </div>
-
-        <nav class="hidden md:flex items-center gap-10">
-            <a href="#portfolio" class="hover:text-gold transition">Portfolio</a>
-            <a href="#about" class="hover:text-gold transition">About</a>
-            <a href="#contact" class="hover:text-gold transition">Contact</a>
-        </nav>
-
-        <a href="#contact"
-           class="px-6 py-2 border border-gold text-gold hover:bg-gold hover:text-black transition rounded">
-           BOOK ME
-        </a>
-    </div>
+<!-- HEADER -->
+<header class="w-full py-8 flex justify-center">
+    <div class="text-5xl font-serif tracking-[0.3em] gold">YP FILMS</div>
 </header>
 
-<!-- HERO with your YouTube video -->
-<section class="relative h-[90vh] w-full overflow-hidden mt-[90px]">
-
+<!-- HERO -->
+<section class="relative h-[85vh] w-full overflow-hidden fade">
     <iframe
         src="https://www.youtube.com/embed/91wCeVs2C2k?autoplay=1&mute=1&controls=0&loop=1&playlist=91wCeVs2C2k"
         class="absolute inset-0 w-full h-full object-cover"
+        frameborder="0"
         allow="autoplay; fullscreen">
     </iframe>
 
-    <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
-        <h1 class="text-6xl md:text-8xl font-serif tracking-tight text-gold drop-shadow-xl">
-            CINEMATIC STORYTELLING
+    <div class="absolute inset-0 bg-black/50 flex items-center justify-center">
+        <h1 class="text-6xl md:text-8xl font-serif gold tracking-wide">
+            Yigal Pesahov Films
         </h1>
     </div>
+
+    <!-- Watermark -->
+    <div class="absolute bottom-10 right-10 text-[#D4AF37]/50 tracking-widest text-sm">
+        YIGAL PESAHOV FILMS
+    </div>
 </section>
 
-<!-- PORTFOLIO TITLE -->
-<section id="portfolio" class="max-w-7xl mx-auto px-6 pt-20 pb-10">
-    <h2 class="text-5xl font-serif text-center text-gold mb-2">Full Portfolio</h2>
-    <p class="text-center text-white/70 text-lg">Director • Cinematographer • Editor</p>
+<!-- ABOUT -->
+<section class="max-w-6xl mx-auto px-6 py-20 fade">
+    <h2 class="text-5xl font-serif gold mb-10">About</h2>
+
+    <div class="flex flex-col md:flex-row items-center gap-10">
+        <img src="yigal.jpg"
+             class="w-80 md:w-[450px] rounded-lg border border-[#D4AF37] shadow-2xl">
+
+        <p class="text-lg leading-relaxed opacity-90">
+            Yigal Pesahov Films is a high-end production company specializing in commercial filmmaking,
+            advertisements, corporate videos, music video production and luxury event cinematography.
+            With 25 years of global experience, we bring cinematic storytelling to the forefront of every
+            project using advanced equipment, creative direction and world-class editing.
+            We work with elite clients, international brands and top artists worldwide.
+        </p>
+    </div>
 </section>
 
-<!-- START GRID -->
-<section class="w-full px-0">
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0">
-        <!-- WEDDINGS -->
-<!-- ====================================== -->
-<div class="col-span-full w-full py-16">
-    <h3 class="text-center text-3xl md:text-4xl font-serif text-gold mb-10">
-        Weddings
-    </h3>
-</div>
+<!-- PORTFOLIO -->
+<section class="max-w-[1700px] mx-auto px-0 py-10">
 
-<!-- Video Grid - 4 per row, zero spacing -->
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0">
+<h2 class="text-5xl font-serif gold mb-10 px-6 fade">Full Portfolio</h2>
 
-    <!-- Fs7HBajAmcM -->
-    <div class="aspect-video">
-        <iframe 
-            src="https://www.youtube.com/embed/Fs7HBajAmcM"
-            loading="lazy" 
-            class="w-full h-full"
-            frameborder="0"
-            allow="autoplay; fullscreen">
-        </iframe>
+
+
+<!-- ⭐ WEDDINGS -->
+<h3 class="text-4xl font-serif gold mb-6 px-6 fade">Weddings</h3>
+<div class="thumb-grid">
+
+    <div id="wed1" class="thumb fade" onclick="loadVideo('wed1','https://www.youtube.com/embed/Fs7HBajAmcM')">
+        <img loading="lazy" src="https://img.youtube.com/vi/Fs7HBajAmcM/maxresdefault.jpg">
     </div>
 
-    <!-- XBZ4Un1xrLw -->
-    <div class="aspect-video">
-        <iframe 
-            src="https://www.youtube.com/embed/XBZ4Un1xrLw"
-            loading="lazy" 
-            class="w-full h-full"
-            frameborder="0"
-            allow="autoplay; fullscreen">
-        </iframe>
+    <div id="wed2" class="thumb fade" onclick="loadVideo('wed2','https://www.youtube.com/embed/XBZ4Un1xrLw')">
+        <img loading="lazy" src="https://img.youtube.com/vi/XBZ4Un1xrLw/maxresdefault.jpg">
     </div>
 
-    <!-- Vimeo 771718825 -->
-    <div class="aspect-video">
-        <iframe 
-            src="https://player.vimeo.com/video/771718825"
-            loading="lazy"
-            class="w-full h-full"
-            frameborder="0"
-            allow="autoplay; fullscreen">
-        </iframe>
+    <div id="wed3" class="thumb fade" onclick="loadVideo('wed3','https://player.vimeo.com/video/771718825')">
+        <img loading="lazy" src="https://vumbnail.com/771718825.jpg">
     </div>
 
-    <!-- Vimeo 111126323 -->
-    <div class="aspect-video">
-        <iframe 
-            src="https://player.vimeo.com/video/111126323"
-            loading="lazy"
-            class="w-full h-full"
-            frameborder="0"
-            allow="autoplay; fullscreen">
-        </iframe>
+    <div id="wed4" class="thumb fade" onclick="loadVideo('wed4','https://player.vimeo.com/video/111126323')">
+        <img loading="lazy" src="https://vumbnail.com/111126323.jpg">
     </div>
 
-    <!-- Vimeo 768221571 -->
-    <div class="aspect-video">
-        <iframe 
-            src="https://player.vimeo.com/video/768221571"
-            loading="lazy"
-            class="w-full h-full"
-            frameborder="0"
-            allow="autoplay; fullscreen">
-        </iframe>
+    <div id="wed5" class="thumb fade" onclick="loadVideo('wed5','https://player.vimeo.com/video/768221571')">
+        <img loading="lazy" src="https://vumbnail.com/768221571.jpg">
     </div>
 
 </div>
-<!-- END WEDDINGS -->
-        <!-- MUSIC VIDEOS -->
-<!-- ====================================== -->
-<div class="col-span-full w-full py-16">
-    <h3 class="text-center text-3xl md:text-4xl font-serif text-gold mb-10">
-        Music Videos
-    </h3>
-</div>
 
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0">
 
-    <!-- YOJSVwGx8NE -->
-    <div class="aspect-video">
-        <iframe 
-            src="https://www.youtube.com/embed/YOJSVwGx8NE"
-            loading="lazy" 
-            class="w-full h-full"
-            frameborder="0"
-            allow="autoplay; fullscreen">
-        </iframe>
+
+<!-- ⭐ MUSIC VIDEOS -->
+<h3 class="text-4xl font-serif gold mt-20 mb-6 px-6 fade">Music Videos</h3>
+<div class="thumb-grid">
+
+    <div id="mv1" class="thumb fade" onclick="loadVideo('mv1','https://www.youtube.com/embed/YOJSVwGx8NE')">
+        <img loading="lazy" src="https://img.youtube.com/vi/YOJSVwGx8NE/maxresdefault.jpg">
     </div>
 
-    <!-- qkVQEuNsrSA -->
-    <div class="aspect-video">
-        <iframe 
-            src="https://www.youtube.com/embed/qkVQEuNsrSA"
-            loading="lazy"
-            class="w-full h-full"
-            frameborder="0"
-            allow="autoplay; fullscreen">
-        </iframe>
+    <div id="mv2" class="thumb fade" onclick="loadVideo('mv2','https://www.youtube.com/embed/qkVQEuNsrSA')">
+        <img loading="lazy" src="https://img.youtube.com/vi/qkVQEuNsrSA/maxresdefault.jpg">
     </div>
 
-    <!-- 0kn0QSRwzEE -->
-    <div class="aspect-video">
-        <iframe 
-            src="https://www.youtube.com/embed/0kn0QSRwzEE"
-            loading="lazy"
-            class="w-full h-full"
-            frameborder="0"
-            allow="autoplay; fullscreen">
-        </iframe>
+    <div id="mv3" class="thumb fade" onclick="loadVideo('mv3','https://www.youtube.com/embed/0kn0QSRwzEE')">
+        <img loading="lazy" src="https://img.youtube.com/vi/0kn0QSRwzEE/maxresdefault.jpg">
     </div>
 
-    <!-- GcWwsIHIpcE -->
-    <div class="aspect-video">
-        <iframe 
-            src="https://www.youtube.com/embed/GcWwsIHIpcE"
-            loading="lazy"
-            class="w-full h-full"
-            frameborder="0"
-            allow="autoplay; fullscreen">
-        </iframe>
+    <div id="mv4" class="thumb fade" onclick="loadVideo('mv4','https://www.youtube.com/embed/GcWwsIHIpcE')">
+        <img loading="lazy" src="https://img.youtube.com/vi/GcWwsIHIpcE/maxresdefault.jpg">
     </div>
 
-    <!-- ULHE6AZQDBg -->
-    <div class="aspect-video">
-        <iframe 
-            src="https://www.youtube.com/embed/ULHE6AZQDBg"
-            loading="lazy"
-            class="w-full h-full"
-            frameborder="0"
-            allow="autoplay; fullscreen">
-        </iframe>
+    <div id="mv5" class="thumb fade" onclick="loadVideo('mv5','https://www.youtube.com/embed/ULHE6AZQDBg')">
+        <img loading="lazy" src="https://img.youtube.com/vi/ULHE6AZQDBg/maxresdefault.jpg">
     </div>
 
-    <!-- sNrQ-tT9wX8 -->
-    <div class="aspect-video">
-        <iframe 
-            src="https://www.youtube.com/embed/sNrQ-tT9wX8"
-            loading="lazy"
-            class="w-full h-full"
-            frameborder="0"
-            allow="autoplay; fullscreen">
-        </iframe>
+    <div id="mv6" class="thumb fade" onclick="loadVideo('mv6','https://www.youtube.com/embed/sNrQ-tT9wX8')">
+        <img loading="lazy" src="https://img.youtube.com/vi/sNrQ-tT9wX8/maxresdefault.jpg">
     </div>
 
-    <!-- CN0T6VafQXg -->
-    <div class="aspect-video">
-        <iframe 
-            src="https://www.youtube.com/embed/CN0T6VafQXg"
-            loading="lazy"
-            class="w-full h-full"
-            frameborder="0"
-            allow="autoplay; fullscreen">
-        </iframe>
+    <div id="mv7" class="thumb fade" onclick="loadVideo('mv7','https://www.youtube.com/embed/CN0T6VafQXg')">
+        <img loading="lazy" src="https://img.youtube.com/vi/CN0T6VafQXg/maxresdefault.jpg">
     </div>
 
-    <!-- tHSkJJOp5yM -->
-    <div class="aspect-video">
-        <iframe 
-            src="https://www.youtube.com/embed/tHSkJJOp5yM"
-            loading="lazy"
-            class="w-full h-full"
-            frameborder="0"
-            allow="autoplay; fullscreen">
-        </iframe>
+    <div id="mv8" class="thumb fade" onclick="loadVideo('mv8','https://www.youtube.com/embed/tHSkJJOp5yM')">
+        <img loading="lazy" src="https://img.youtube.com/vi/tHSkJJOp5yM/maxresdefault.jpg">
     </div>
 
 </div>
-<!-- END MUSIC VIDEOS -->
-        <!-- COMMERCIALS -->
-<div class="col-span-full w-full py-16 mt-10">
-    <h3 class="text-center text-3xl md:text-4xl font-serif text-gold mb-10">
-        Commercials
-    </h3>
-</div>
 
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0">
 
-    <div class="aspect-video">
-        <iframe src="https://player.vimeo.com/video/1095359678" loading="lazy"
-            class="w-full h-full"></iframe>
+
+<!-- ⭐ COMMERCIALS -->
+<h3 class="text-4xl font-serif gold mt-20 mb-6 px-6 fade">Commercials</h3>
+<div class="thumb-grid">
+
+    <div id="com1" class="thumb fade" onclick="loadVideo('com1','https://player.vimeo.com/video/1095359678')">
+        <img loading="lazy" src="https://vumbnail.com/1095359678.jpg">
     </div>
 
-    <div class="aspect-video">
-        <iframe src="https://player.vimeo.com/video/1095359065" loading="lazy"
-            class="w-full h-full"></iframe>
+    <div id="com2" class="thumb fade" onclick="loadVideo('com2','https://player.vimeo.com/video/1095359065')">
+        <img loading="lazy" src="https://vumbnail.com/1095359065.jpg">
     </div>
 
-    <div class="aspect-video">
-        <iframe src="https://player.vimeo.com/video/1095359061" loading="lazy"
-            class="w-full h-full"></iframe>
+    <div id="com3" class="thumb fade" onclick="loadVideo('com3','https://player.vimeo.com/video/1095359061')">
+        <img loading="lazy" src="https://vumbnail.com/1095359061.jpg">
     </div>
 
-    <div class="aspect-video">
-        <iframe src="https://player.vimeo.com/video/385319827" loading="lazy"
-            class="w-full h-full"></iframe>
+    <div id="com4" class="thumb fade" onclick="loadVideo('com4','https://player.vimeo.com/video/385319827')">
+        <img loading="lazy" src="https://vumbnail.com/385319827.jpg">
     </div>
 
-    <div class="aspect-video">
-        <iframe src="https://player.vimeo.com/video/1095358967" loading="lazy"
-            class="w-full h-full"></iframe>
+    <div id="com5" class="thumb fade" onclick="loadVideo('com5','https://player.vimeo.com/video/1095358967')">
+        <img loading="lazy" src="https://vumbnail.com/1095358967.jpg">
     </div>
 
-    <div class="aspect-video">
-        <iframe src="https://player.vimeo.com/video/1095374467" loading="lazy"
-            class="w-full h-full"></iframe>
+    <div id="com6" class="thumb fade" onclick="loadVideo('com6','https://player.vimeo.com/video/1095374467')">
+        <img loading="lazy" src="https://vumbnail.com/1095374467.jpg">
     </div>
 
-    <div class="aspect-video">
-        <iframe src="https://www.youtube.com/embed/_Wc2_z43Oys" loading="lazy"
-            class="w-full h-full"></iframe>
+    <div id="com7" class="thumb fade" onclick="loadVideo('com7','https://www.youtube.com/embed/_Wc2_z43Oys')">
+        <img loading="lazy" src="https://img.youtube.com/vi/_Wc2_z43Oys/maxresdefault.jpg">
     </div>
 
-    <div class="aspect-video">
-        <iframe src="https://www.youtube.com/embed/4oR6fRBbdII" loading="lazy"
-            class="w-full h-full"></iframe>
+    <div id="com8" class="thumb fade" onclick="loadVideo('com8','https://www.youtube.com/embed/4oR6fRBbdII')">
+        <img loading="lazy" src="https://img.youtube.com/vi/4oR6fRBbdII/maxresdefault.jpg">
     </div>
 
-    <div class="aspect-video">
-        <iframe src="https://www.youtube.com/embed/jNuBSAgBFm8" loading="lazy"
-            class="w-full h-full"></iframe>
-    </div>
-
-    <div class="aspect-video">
-        <iframe src="https://player.vimeo.com/video/1095374337" loading="lazy"
-            class="w-full h-full"></iframe>
-    </div>
-
-    <div class="aspect-video">
-        <iframe src="https://www.youtube.com/embed/7C3vIISgTUc" loading="lazy"
-            class="w-full h-full"></iframe>
-    </div>
-
-    <div class="aspect-video">
-        <iframe src="https://www.youtube.com/embed/eAIPzRJW7GU" loading="lazy"
-            class="w-full h-full"></iframe>
+    <div id="com9" class="thumb fade" onclick="loadVideo('com9','https://www.youtube.com/embed/jNuBSAgBFm8')">
+        <img loading="lazy" src="https://img.youtube.com/vi/jNuBSAgBFm8/maxresdefault.jpg">
     </div>
 
 </div>
+
+
+
+<!-- ⭐ LOVE STORY -->
+<h3 class="text-4xl font-serif gold mt-20 mb-6 px-6 fade">Love Story</h3>
+<div class="thumb-grid">
+
+    <div id="ls1" class="thumb fade" onclick="loadVideo('ls1','https://player.vimeo.com/video/517726628')">
+        <img loading="lazy" src="https://vumbnail.com/517726628.jpg">
+    </div>
+
+    <div id="ls2" class="thumb fade" onclick="loadVideo('ls2','https://www.youtube.com/embed/kvATN413pM0')">
+        <img loading="lazy" src="https://img.youtube.com/vi/kvATN413pM0/maxresdefault.jpg">
+    </div>
+
+    <div id="ls3" class="thumb fade" onclick="loadVideo('ls3','https://www.youtube.com/embed/kGxYy6LtSWE')">
+        <img loading="lazy" src="https://img.youtube.com/vi/kGxYy6LtSWE/maxresdefault.jpg">
+    </div>
+
+    <div id="ls4" class="thumb fade" onclick="loadVideo('ls4','https://www.youtube.com/embed/abnaHOrVla0')">
+        <img loading="lazy" src="https://img.youtube.com/vi/abnaHOrVla0/maxresdefault.jpg">
+    </div>
+
+    <div id="ls5" class="thumb fade" onclick="loadVideo('ls5','https://www.youtube.com/embed/0qLo1QdDVSw')">
+        <img loading="lazy" src="https://img.youtube.com/vi/0qLo1QdDVSw/maxresdefault.jpg">
+    </div>
+
+    <div id="ls6" class="thumb fade" onclick="loadVideo('ls6','https://www.youtube.com/embed/-UP3AVATzAw')">
+        <img loading="lazy" src="https://img.youtube.com/vi/-UP3AVATzAw/maxresdefault.jpg">
+    </div>
+
+</div>
+
+
+
+<!-- ⭐ CORPORATE -->
+<h3 class="text-4xl font-serif gold mt-20 mb-6 px-6 fade">Corporate</h3>
+<div class="thumb-grid">
+
+    <div id="cor1" class="thumb fade" onclick="loadVideo('cor1','https://www.youtube.com/embed/ncJYj1iAJ2E')">
+        <img loading="lazy" src="https://img.youtube.com/vi/ncJYj1iAJ2E/maxresdefault.jpg">
+    </div>
+
+    <div id="cor2" class="thumb fade" onclick="loadVideo('cor2','https://www.youtube.com/embed/mV8PLXBBsiA')">
+        <img loading="lazy" src="https://img.youtube.com/vi/mV8PLXBBsiA/maxresdefault.jpg">
+    </div>
+
+    <div id="cor3" class="thumb fade" onclick="loadVideo('cor3','https://www.youtube.com/embed/bcYoOos8KyQ')">
+        <img loading="lazy" src="https://img.youtube.com/vi/bcYoOos8KyQ/maxresdefault.jpg">
+    </div>
+
+    <div id="cor4" class="thumb fade" onclick="loadVideo('cor4','https://www.youtube.com/embed/f3ejIt91NHw')">
+        <img loading="lazy" src="https://img.youtube.com/vi/f3ejIt91NHw/maxresdefault.jpg">
+    </div>
+
+    <div id="cor5" class="thumb fade" onclick="loadVideo('cor5','https://www.youtube.com/embed/fSux3QxHO1w')">
+        <img loading="lazy" src="https://img.youtube.com/vi/fSux3QxHO1w/maxresdefault.jpg">
+    </div>
+
+    <div id="cor6" class="thumb fade" onclick="loadVideo('cor6','https://www.youtube.com/embed/_oa-fZCWUwQ')">
+        <img loading="lazy" src="https://img.youtube.com/vi/_oa-fZCWUwQ/maxresdefault.jpg">
+    </div>
+
+    <div id="cor7" class="thumb fade" onclick="loadVideo('cor7','https://www.youtube.com/embed/y4LVV8soudA')">
+        <img loading="lazy" src="https://img.youtube.com/vi/y4LVV8soudA/maxresdefault.jpg">
+    </div>
+
+    <div id="cor8" class="thumb fade" onclick="loadVideo('cor8','https://www.youtube.com/embed/_FHRhUsPDJs')">
+        <img loading="lazy" src="https://img.youtube.com/vi/_FHRhUsPDJs/maxresdefault.jpg">
+    </div>
+
+    <div id="cor9" class="thumb fade" onclick="loadVideo('cor9','https://www.youtube.com/embed/X6BvkonoI_w')">
+        <img loading="lazy" src="https://img.youtube.com/vi/X6BvkonoI_w/maxresdefault.jpg">
+    </div>
+
+    <div id="cor10" class="thumb fade" onclick="loadVideo('cor10','https://www.youtube.com/embed/06tThZW5uh4')">
+        <img loading="lazy" src="https://img.youtube.com/vi/06tThZW5uh4/maxresdefault.jpg">
+    </div>
+
+    <div id="cor11" class="thumb fade" onclick="loadVideo('cor11','https://www.youtube.com/embed/Drm4ItDGYME')">
+        <img loading="lazy" src="https://img.youtube.com/vi/Drm4ItDGYME/maxresdefault.jpg">
+    </div>
+
+</div>
+
+
+<!-- FOOTER -->
+<footer class="text-center py-20 mt-20 border-t border-[#D4AF37]/20 fade">
+    <div class="gold tracking-widest mb-3 text-xl">YIGAL PESAHOV FILMS</div>
+    <div class="opacity-60 text-sm">© 2025 All Rights Reserved</div>
+</footer>
+
+</section>
+
+</body>
+</html>
