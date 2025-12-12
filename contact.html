@@ -138,12 +138,56 @@
                         class="w-full px-4 py-3 rounded-sm appearance-none">
                         <option value="" disabled selected>Select a project type...</option>
                         <option value="Wedding">Wedding</option>
-                        <option value="Music Video">Music Video</option>
+                        <option value="Bar Mitzvah">Bar Mitzvah</option>
+                        <option value="Bat Mitzvah">Bat Mitzvah</option>
+                        <option value="Brit Milah">Bris (Brit Milah)</option>
+                        <option value="Birthday">Birthday</option>
                         <option value="Commercial">Commercial</option>
-                        <option value="Corporate">Corporate</option>
+                        <option value="Corporate Film">Corporate Film</option>
+                        <option value="Documentary Film">Documentary Film</option>
+                        <option value="Private Event">Private Event</option>
+                        <option value="Live Show">Live Show</option>
+                        <option value="Save The Date">Save The Date</option>
                         <option value="Love Story">Love Story</option>
+                        <option value="Video Clip">Video Clip</option>
+                        <option value="Save The Date">Save The Date</option>
+                        <option value="Love Story">Love Story</option>
+                        <option value="Video Clip">Video Clip</option>
                         <option value="Other">Other</option>
                     </select>
+                </div>
+
+                <!-- DYNAMIC FIELDS (Hidden by default) -->
+                <div id="event-fields" class="space-y-8 hidden">
+                    <!-- Guest Count -->
+                    <div>
+                        <label for="guests" class="block text-sm uppercase tracking-widest text-gold mb-2">Number of
+                            Guests</label>
+                        <input type="number" id="guests" name="guests" placeholder="Approximate number of guests"
+                            class="w-full px-4 py-3 rounded-sm">
+                    </div>
+
+                    <!-- Event Venue -->
+                    <div>
+                        <label for="venue" class="block text-sm uppercase tracking-widest text-gold mb-2">Event Venue /
+                            Location</label>
+                        <input type="text" id="venue" name="venue" placeholder="Where is the event taking place?"
+                            class="w-full px-4 py-3 rounded-sm">
+                    </div>
+
+                    <!-- Referral Source -->
+                    <div>
+                        <label for="referral" class="block text-sm uppercase tracking-widest text-gold mb-2">How did you
+                            hear about us?</label>
+                        <select id="referral" name="referral" class="w-full px-4 py-3 rounded-sm appearance-none">
+                            <option value="" disabled selected>Select an option...</option>
+                            <option value="Instagram">Instagram</option>
+                            <option value="Facebook">Facebook</option>
+                            <option value="Google Search">Google Search</option>
+                            <option value="Friend/Family Recommendation">Friend / Family Recommendation</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
                 </div>
 
                 <!-- Email -->
@@ -194,6 +238,27 @@
         © 2025 Yigal Pesahov Films — All Rights Reserved
     </footer>
 
+    <script>
+        const projectSelect = document.getElementById('project_type');
+        const eventFields = document.getElementById('event-fields');
+        const specialEvents = ['Wedding', 'Bar Mitzvah', 'Bat Mitzvah', 'Brit Milah'];
+
+        projectSelect.addEventListener('change', function () {
+            if (specialEvents.includes(this.value)) {
+                eventFields.classList.remove('hidden');
+                // Make fields required when visible
+                document.getElementById('guests').required = true;
+                document.getElementById('venue').required = true;
+                document.getElementById('referral').required = true;
+            } else {
+                eventFields.classList.add('hidden');
+                // Remove required attribute when hidden
+                document.getElementById('guests').required = false;
+                document.getElementById('venue').required = false;
+                document.getElementById('referral').required = false;
+            }
+        });
+    </script>
 </body>
 
 </html>
