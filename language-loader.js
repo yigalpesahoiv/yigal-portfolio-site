@@ -33,8 +33,21 @@ const translations = {
         'desc_love_stories': 'Short, emotional films celebrating couplehood and romance.',
         'cat_corporate': 'Corporate',
         'desc_corporate': 'Professional corporate films and branding content.',
-        'cat_live_shows': 'Live Shows',
-        'desc_live_shows': 'Spectacular live performances and stage productions.',
+        // Services Section
+        'services_title': 'Our Services',
+        'svc_weddings_title': 'Weddings',
+        'svc_weddings_desc': 'Cinematic documentation of meaningful wedding days with a quiet, precise, and unobtrusive approach. Focus on atmosphere, timing, and real moments as they unfold, shaped through refined cinematic storytelling, elegant editing, and visual depth.',
+        'svc_love_stories_title': 'Love Stories',
+        'svc_love_stories_desc': 'Personal and intimate films created with sensitivity and restraint. Approached as cinematic pieces that focus on connection, presence, and shared moments, allowing authenticity to guide the narrative.',
+        'svc_commercials_title': 'Commercials',
+        'svc_commercials_desc': 'High-end commercial films for brands seeking strong visual identity and storytelling. From concept development to final delivery, each project balances cinematic aesthetics with clear messaging and emotional impact.',
+        'svc_corporate_title': 'Corporate',
+        'svc_corporate_desc': 'Corporate films that feel human, polished, and visually elevated. Designed for companies and organizations looking to present their story, values, or vision through a cinematic and professional lens.',
+        'svc_music_videos_title': 'Music Videos',
+        'svc_music_videos_desc': 'Cinematic music video production for artists and labels who value atmosphere, rhythm, and visual identity. Each project translates sound and mood into a strong visual language with creative direction and cinematic flow.',
+        'svc_live_shows_title': 'Live Shows',
+        'svc_live_shows_desc': 'Cinematic documentation of live performances and large-scale events. Focused on energy, scale, and emotion — capturing not only what happens on stage, but the experience itself.',
+
 
         // Instagram
         'insta_follow': 'Follow',
@@ -138,8 +151,21 @@ const translations = {
         'desc_love_stories': 'סרטים קצרים ומרגשים החוגגים זוגיות ורומנטיקה.',
         'title_corporate': 'תדמית ועסקים',
         'desc_corporate': 'סרטי תדמית מקצועיים ותוכן שיווקי לעסקים.',
-        'cat_live_shows': 'הופעות חיות',
-        'desc_live_shows': 'הופעות חיות מרהיבות והפקות במה.',
+        // Services Section
+        'services_title': 'השירותים שלנו',
+        'svc_weddings_title': 'חתונות',
+        'svc_weddings_desc': 'תיעוד קולנועי של ימי חתונה משמעותיים בגישה שקטה, מדויקת ובלתי מורגשת. התמקדות באווירה, תזמון ורגעים אמיתיים בזמן התרחשותם, המעוצבים באמצעות סיפור קולנועי מעודן, עריכה אלגנטית ועומק ויזואלי.',
+        'svc_love_stories_title': 'סיפורי אהבה',
+        'svc_love_stories_desc': 'סרטים אישיים ואינטימיים הנוצרים ברגישות ואיפוק. גישה קולנועית המתמקדת בחיבור, נוכחות ורגעים משותפים, המאפשרת לאותנטיות להוביל את הנרטיב.',
+        'svc_commercials_title': 'פרסומות',
+        'svc_commercials_desc': 'סרטי פרסומת יוקרתיים למותגים המחפשים זהות ויזואלית חזקה וסיפור. מפיתוח הקונספט ועד למסירה הסופית, כל פרויקט מאזן אסתטיקה קולנועית עם מסר ברור והשפעה רגשית.',
+        'svc_corporate_title': 'תדמית ועסקים',
+        'svc_corporate_desc': 'סרטי תדמית שמרגישים אנושיים, מלוטשים ומוגבהים ויזואלית. מיועדים לחברות וארגונים המעוניינים להציג את הסיפור, הערכים או החזון שלהם דרך עדשה קולנועית ומקצועית.',
+        'svc_music_videos_title': 'וידאו קליפ',
+        'svc_music_videos_desc': 'הפקת קליפים קולנועיים לאמנים ולייבלים המעריכים אווירה, קצב וזהות ויזואלית. כל פרויקט מתרגם סאונד ומצב רוח לשפה ויזואלית חזקה עם ניהול קריאייטיבי וזרימה קולנועית.',
+        'svc_live_shows_title': 'הופעות חיות',
+        'svc_live_shows_desc': 'תיעוד קולנועי של הופעות חיות ואירועים רחבי היקף. התמקדות באנרגיה, גודל ורגש — לכידת לא רק מה שקורה על הבמה, אלא החוויה עצמה.',
+
 
         // Instagram
         'insta_follow': 'עקוב',
