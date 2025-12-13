@@ -59,7 +59,12 @@ const translations = {
         'insta_see_more': 'See more posts on the app',
         'insta_desc_1': '🎥 Filmmaker & Director',
         'insta_desc_2': '🌍 Worldwide Productions',
-        'insta_desc_3': '✨ Commercials • Music Videos • Weddings',
+        // On Set Section
+        'onset_title': 'On Set Around the World',
+        'onset_text_1': 'Over the years, I’ve had the opportunity to work on productions across different countries and cultures, alongside industry leaders, artists, executives, and public figures.',
+        'onset_text_2': 'These images were captured during real working moments — on active sets, between takes, and throughout demanding production days that required precision, discretion, and a high level of professionalism.',
+        'onset_text_3': 'A glimpse into the reality of international productions.',
+
 
 
         // Client Area
@@ -177,7 +182,12 @@ const translations = {
         'insta_see_more': 'צפה בפוסטים נוספים באפליקציה',
         'insta_desc_1': '🎥 במאי ויוצר סרטים',
         'insta_desc_2': '🌍 הפקות חובקות עולם',
-        'insta_desc_3': '✨ פרסומות • קליפים • חתונות',
+        // On Set Section
+        'onset_title': 'על הסט ברחבי העולם',
+        'onset_text_1': 'במהלך השנים יצא לי לעבוד בהפקות במדינות שונות, לצד אנשי תעשייה, אמנים, אנשי עסקים ודמויות ציבוריות מוכרות.',
+        'onset_text_2': 'התמונות בעמוד זה צולמו במהלך ימי עבודה אמיתיים — על סטים פעילים, בין טייקים, ובמהלך הפקות שדרשו דיוק, דיסקרטיות ורמה מקצועית גבוהה.',
+        'onset_text_3': 'הצצה למציאות של הפקות בינלאומיות.',
+
 
         // Client Area
         'client_subtitle': 'פורטל לקוחות',
