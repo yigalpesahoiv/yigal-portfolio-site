@@ -13,6 +13,12 @@ const translations = {
         'hero_description': 'Luxury filmmaking, storytelling and high-end productions across the globe.',
         'hero_cta': 'Explore Portfolio',
 
+        // About / Method
+        'about_subtitle': 'The Method',
+        'about_title': 'Cinematic Storytelling',
+        'about_text_1': 'I do not just film events; I capture the essence of the moment. My approach is rooted in cinema—focusing on raw emotion, perfect lighting, and the unique narrative of your story.',
+        'about_text_2': 'As a director, I craft a visual legacy that is timeless, elegant, and unmistakably yours.',
+
         // Portfolio & Subpages
         'portfolio_subtitle': 'Portfolio',
         'portfolio_title': 'Featured Works',
@@ -111,6 +117,12 @@ const translations = {
         'hero_title': 'מצוינות קולנועית<br>חובקת עולם',
         'hero_description': 'הפקות יוקרה, סיפורים ויצירה קולנועית ברמה הגבוהה ביותר ברחבי העולם.',
         'hero_cta': 'לתיק העבודות',
+
+        // About / Method
+        'about_subtitle': 'הגישה שלי',
+        'about_title': 'סיפור קולנועי',
+        'about_text_1': 'אני לא רק מצלם אירועים; אני לוכד את מהות הרגע. הגישה שלי שואבת השראה מהקולנוע—התמקדות ברגש גולמי, תאורה מושלמת והסיפור הייחודי שלכם.',
+        'about_text_2': 'כבמאי, אני יוצר עבורכם מורשת ויזואלית על-זמנית, אלגנטית ובלתי נשכחת.',
 
         // Portfolio & Subpages
         'portfolio_subtitle': 'תיק עבודות',
