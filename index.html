@@ -26,7 +26,7 @@
 
     <!-- Fonts -->
     <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=Heebo:wght@300;400;500;700&display=swap"
         rel="stylesheet">
 
     <style>
@@ -45,8 +45,8 @@
             theme: {
                 extend: {
                     fontFamily: {
-                        'serif': ['Cormorant Garamond', 'serif'],
-                        'sans': ['Inter', 'sans-serif'],
+                        'serif': ['Cormorant Garamond', 'Heebo', 'serif'],
+                        'sans': ['Inter', 'Heebo', 'sans-serif'],
                     },
                     colors: {
                         'gold': '#D4AF37',
@@ -85,43 +85,88 @@
         class="fixed top-0 left-0 right-0 z-50 bg-deep-black/80 backdrop-blur-md border-b border-white/5">
         <div class="max-w-7xl mx-auto px-8 py-6 flex items-center justify-between">
             <div class="text-2xl font-serif tracking-wider text-gold">YIGAL PESAHOV</div>
+
             <nav class="hidden md:flex items-center gap-10">
-                <a href="#home"
+                <a href="#home" data-i18n="nav_home"
                     class="text-sm tracking-widest uppercase hover:text-gold transition-colors duration-300">Home</a>
 
-                <a href="#portfolio"
+                <a href="#portfolio" data-i18n="nav_portfolio"
                     class="text-sm tracking-widest uppercase hover:text-gold transition-colors duration-300">Portfolio</a>
 
-                <a href="instagram.html"
+                <a href="instagram.html" data-i18n="nav_instagram"
                     class="text-sm tracking-widest uppercase hover:text-gold transition-colors duration-300">Instagram</a>
-                <a href="client-area.html"
+                <a href="client-area.html" data-i18n="nav_client_area"
                     class="text-sm tracking-widest uppercase hover:text-gold transition-colors duration-300">Client
                     Area</a>
-                <a href="contact.html"
+                <a href="contact.html" data-i18n="nav_contact"
                     class="text-sm tracking-widest uppercase hover:text-gold transition-colors duration-300">Contact</a>
             </nav>
 
-            <!-- Mobile Menu Button -->
-            <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-            </button>
+            <div class="flex items-center gap-4 order-last md:order-none ml-4 md:ml-0 rtl:flex-row-reverse">
+                <div class="flex items-center gap-4">
+                    <button data-lang-btn="en"
+                        class="w-6 h-6 rounded-full overflow-hidden transition-all duration-300 opacity-50 hover:opacity-100"
+                        aria-label="English">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" class="w-full h-full object-cover">
+                            <clipPath id="s">
+                                <path d="M0,0 v30 h60 v-30 z" />
+                            </clipPath>
+                            <clipPath id="t">
+                                <path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z" />
+                            </clipPath>
+                            <g clip-path="url(#s)">
+                                <path d="M0,0 v30 h60 v-30 z" fill="#012169" />
+                                <path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6" />
+                                <path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#t)" stroke="#C8102E"
+                                    stroke-width="4" />
+                                <path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10" />
+                                <path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6" />
+                            </g>
+                        </svg>
+                    </button>
+                    <button data-lang-btn="he"
+                        class="w-6 h-6 rounded-full overflow-hidden transition-all duration-300 opacity-50 hover:opacity-100"
+                        aria-label="Hebrew">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 440"
+                            class="w-full h-full object-cover">
+                            <path fill="#fff" d="M0 0h660v440H0z" />
+                            <path fill="#0038b8" d="M0 48h660v83H0zm0 261h660v83H0z" />
+                            <g fill="none" stroke="#0038b8" stroke-width="26.333">
+                                <path d="M330.001 138.583l-79.623 137.91h159.246z" />
+                                <path d="M330.001 301.417l-79.623-137.91h159.246z" />
+                            </g>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
         </div>
 
         <!-- Mobile Menu Overlay -->
         <div id="mobile-menu"
             class="hidden md:hidden absolute top-full left-0 right-0 bg-deep-black/95 backdrop-blur-xl border-b border-white/10 p-8 shadow-2xl">
             <nav class="flex flex-col gap-6 text-center text-lg">
-                <a href="#home" class="text-white hover:text-gold transition-colors duration-300">Home</a>
+                <a href="#home" data-i18n="nav_home"
+                    class="text-white hover:text-gold transition-colors duration-300">Home</a>
 
-                <a href="#portfolio" class="text-white hover:text-gold transition-colors duration-300">Portfolio</a>
+                <a href="#portfolio" data-i18n="nav_portfolio"
+                    class="text-white hover:text-gold transition-colors duration-300">Portfolio</a>
 
-                <a href="instagram.html" class="text-white hover:text-gold transition-colors duration-300">Instagram</a>
-                <a href="client-area.html" class="text-white hover:text-gold transition-colors duration-300">Client
+                <a href="instagram.html" data-i18n="nav_instagram"
+                    class="text-white hover:text-gold transition-colors duration-300">Instagram</a>
+                <a href="client-area.html" data-i18n="nav_client_area"
+                    class="text-white hover:text-gold transition-colors duration-300">Client
                     Area</a>
-                <a href="contact.html" class="text-white hover:text-gold transition-colors duration-300">Contact</a>
+                <a href="contact.html" data-i18n="nav_contact"
+                    class="text-white hover:text-gold transition-colors duration-300">Contact</a>
             </nav>
         </div>
         </div>
@@ -143,12 +188,15 @@
         <div class="absolute inset-0 bg-gradient-to-b from-deep-black via-transparent to-deep-black z-10"></div>
 
         <div class="relative z-20 text-center max-w-4xl mx-auto px-8">
-            <div class="text-gold text-sm tracking-[0.3em] uppercase mb-6">International Filmmaker & Director</div>
-            <h1 class="text-7xl font-serif font-light leading-tight mb-6 tracking-tight">Cinematic
+            <div class="text-gold text-sm tracking-[0.3em] uppercase mb-6" data-i18n="hero_subtitle">International
+                Filmmaker & Director</div>
+            <h1 class="text-7xl font-serif font-light leading-tight mb-6 tracking-tight" data-i18n="hero_title">
+                Cinematic
                 Excellence<br>Worldwide</h1>
-            <p class="text-xl text-white/70 mb-12 max-w-2xl mx-auto leading-relaxed">Luxury filmmaking, storytelling and
+            <p class="text-xl text-white/70 mb-12 max-w-2xl mx-auto leading-relaxed" data-i18n="hero_description">Luxury
+                filmmaking, storytelling and
                 high-end productions across the globe.</p>
-            <a href="#portfolio"
+            <a href="#portfolio" data-i18n="hero_cta"
                 class="px-10 py-4 bg-gold text-deep-black text-sm tracking-widest uppercase font-medium hover:bg-amber-warm transition-all duration-300">Explore
                 Portfolio</a>
         </div>
@@ -163,9 +211,11 @@
     <section id="portfolio" class="py-32 px-8 bg-gradient-to-b from-deep-black to-black">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-20">
-                <div class="text-gold text-sm tracking-[0.3em] uppercase mb-4">Portfolio</div>
-                <h2 class="text-6xl font-serif font-light mb-6">Featured Works</h2>
-                <p class="text-white/60 text-lg max-w-2xl mx-auto">Explore our cinematic collections across different
+                <div class="text-gold text-sm tracking-[0.3em] uppercase mb-4" data-i18n="portfolio_subtitle">Portfolio
+                </div>
+                <h2 class="text-6xl font-serif font-light mb-6" data-i18n="portfolio_title">Featured Works</h2>
+                <p class="text-white/60 text-lg max-w-2xl mx-auto" data-i18n="portfolio_description">Explore our
+                    cinematic collections across different
                     genres.</p>
             </div>
 
@@ -176,7 +226,8 @@
                         class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500">
                     <div class="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-all"></div>
                     <div class="absolute inset-0 flex items-center justify-center">
-                        <h3 class="text-3xl font-serif text-white group-hover:text-gold transition-colors">Weddings
+                        <h3 class="text-3xl font-serif text-white group-hover:text-gold transition-colors"
+                            data-i18n="cat_weddings">Weddings
                         </h3>
                     </div>
                 </a>
@@ -187,7 +238,8 @@
                         class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500">
                     <div class="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-all"></div>
                     <div class="absolute inset-0 flex items-center justify-center">
-                        <h3 class="text-3xl font-serif text-white group-hover:text-gold transition-colors">Music
+                        <h3 class="text-3xl font-serif text-white group-hover:text-gold transition-colors"
+                            data-i18n="cat_music_videos">Music
                             Videos</h3>
                     </div>
                 </a>
@@ -198,7 +250,8 @@
                         class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500">
                     <div class="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-all"></div>
                     <div class="absolute inset-0 flex items-center justify-center">
-                        <h3 class="text-3xl font-serif text-white group-hover:text-gold transition-colors">Commercials
+                        <h3 class="text-3xl font-serif text-white group-hover:text-gold transition-colors"
+                            data-i18n="cat_commercials">Commercials
                         </h3>
                     </div>
                 </a>
@@ -209,7 +262,8 @@
                         class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500">
                     <div class="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-all"></div>
                     <div class="absolute inset-0 flex items-center justify-center">
-                        <h3 class="text-3xl font-serif text-white group-hover:text-gold transition-colors">Love
+                        <h3 class="text-3xl font-serif text-white group-hover:text-gold transition-colors"
+                            data-i18n="cat_love_stories">Love
                             Stories</h3>
                     </div>
                 </a>
@@ -220,7 +274,8 @@
                         class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500">
                     <div class="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-all"></div>
                     <div class="absolute inset-0 flex items-center justify-center">
-                        <h3 class="text-3xl font-serif text-white group-hover:text-gold transition-colors">Corporate
+                        <h3 class="text-3xl font-serif text-white group-hover:text-gold transition-colors"
+                            data-i18n="cat_corporate">Corporate
                         </h3>
                     </div>
                 </a>
@@ -231,7 +286,8 @@
                         class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500">
                     <div class="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-all"></div>
                     <div class="absolute inset-0 flex items-center justify-center">
-                        <h3 class="text-3xl font-serif text-white group-hover:text-gold transition-colors">Live Shows
+                        <h3 class="text-3xl font-serif text-white group-hover:text-gold transition-colors"
+                            data-i18n="cat_live_shows">Live Shows
                         </h3>
                     </div>
                 </a>
@@ -243,8 +299,9 @@
     <section id="live-shows" class="py-32 px-8 bg-gradient-to-b from-black to-deep-black">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-20">
-                <div class="text-gold text-sm tracking-[0.3em] uppercase mb-4">Portfolio</div>
-                <h2 class="text-6xl font-serif font-light mb-6">Live Shows</h2>
+                <div class="text-gold text-sm tracking-[0.3em] uppercase mb-4" data-i18n="portfolio_subtitle">Portfolio
+                </div>
+                <h2 class="text-6xl font-serif font-light mb-6" data-i18n="cat_live_shows">Live Shows</h2>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
@@ -338,12 +395,14 @@
     <!-- CONTACT -->
     <section class="py-32 px-8">
         <div class="max-w-7xl mx-auto">
-            <h3 id="contact" class="text-4xl font-serif mb-10 text-center text-gold">Contact</h3>
+            <h3 id="contact" class="text-4xl font-serif mb-10 text-center text-gold" data-i18n="contact_title">Contact
+            </h3>
 
             <div class="max-w-4xl mx-auto text-center space-y-8">
-                <p class="text-white/60 text-lg max-w-2xl mx-auto">Ready to bring your vision to life? Let's connect.
+                <p class="text-white/60 text-lg max-w-2xl mx-auto" data-i18n="contact_text">Ready to bring your vision
+                    to life? Let's connect.
                 </p>
-                <a href="contact.html"
+                <a href="contact.html" data-i18n="contact_cta"
                     class="inline-block px-12 py-4 bg-gold text-deep-black text-sm tracking-widest uppercase font-medium hover:bg-amber-warm transition-all duration-300">
                     Contact Me
                 </a>
@@ -356,18 +415,21 @@
     <!-- CLIENT AREA SECTION -->
     <section class="py-32 px-8 bg-gradient-to-t from-deep-black to-black text-center">
         <div class="max-w-3xl mx-auto space-y-8">
-            <div class="text-gold text-sm tracking-[0.3em] uppercase mb-4">Client Portal</div>
-            <h2 class="text-5xl font-serif font-light mb-6">Your Private Experience</h2>
+            <div class="text-gold text-sm tracking-[0.3em] uppercase mb-4" data-i18n="client_subtitle">Client Portal
+            </div>
+            <h2 class="text-5xl font-serif font-light mb-6" data-i18n="client_title">Your Private Experience</h2>
 
             <p class="text-white/70 text-lg leading-relaxed max-w-2xl mx-auto">
-                Your private client experience is powered by <span class="text-white font-medium">Hitbook</span>.
+                <span data-i18n="client_text_1">Your private client experience is powered by <span
+                        class="text-white font-medium">Hitbook</span>.</span>
                 <br><br>
-                A refined, secure space where you can sign contracts, follow your project, review deliverables, and
-                communicate directly with your creative team effortlessly.
+                <span data-i18n="client_text_2">A refined, secure space where you can sign contracts, follow your
+                    project, review deliverables, and
+                    communicate directly with your creative team effortlessly.</span>
             </p>
 
             <div class="pt-8">
-                <a href="https://crm.hitbook.io/login" target="_blank"
+                <a href="https://crm.hitbook.io/login" target="_blank" data-i18n="client_cta"
                     class="inline-block px-12 py-4 bg-gold text-deep-black text-sm tracking-widest uppercase font-medium hover:bg-amber-warm transition-all duration-300 shadow-lg hover:shadow-gold/20 transform hover:scale-105">
                     Login to Client Portal
                 </a>
@@ -377,11 +439,12 @@
 
 
     <!-- FOOTER -->
-    <footer class="py-10 border-t border-white/10 mt-0 text-center text-white/40 text-sm">
+    <footer class="py-10 border-t border-white/10 mt-0 text-center text-white/40 text-sm" data-i18n="footer_rights">
         © 2025 Yigal Pesahov Films — All Rights Reserved
     </footer>
 
 
+    <script src="language-loader.js"></script>
     <script src="video-loader.js"></script>
     <script src="mobile-menu.js"></script>
 </body>
