@@ -21,8 +21,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeBtn = document.getElementById('close-modal');
     const links = document.querySelectorAll('a[href*="youtube.com"], a[href*="youtu.be"], a[href*="vimeo.com"]');
 
-    function openModal(embedUrl) {
-        container.innerHTML = `<iframe src="${embedUrl}" class="w-full h-full" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen referrerpolicy="no-referrer"></iframe>`;
+    function openModal(embedUrl, url) {
+        container.innerHTML = `
+            <iframe src="${embedUrl}" class="w-full h-full" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+            <div class="text-center mt-4">
+                <a href="${url}" target="_blank" class="text-white/50 hover:text-gold text-sm transition-colors border-b border-white/20 hover:border-gold pb-1">
+                    If video doesn't play, click here to watch on YouTube
+                </a>
+            </div>
+        `;
         modal.classList.remove('hidden');
         // Small delay to allow display:block to apply before opacity transition
         setTimeout(() => {
@@ -45,16 +52,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (url.includes('youtube.com') || url.includes('youtu.be')) {
             let videoId = '';
-            if (url.includes('youtu.be')) {
-                videoId = url.split('/').pop().split('?')[0];
-            } else {
-                const urlParams = new URLSearchParams(new URL(url).search);
-                videoId = urlParams.get('v');
+            // Regex to handle various YouTube URL formats:
+            // - https://www.youtube.com/watch?v=VIDEO_ID
+            // - https://youtu.be/VIDEO_ID
+            // - https://www.youtube.com/embed/VIDEO_ID
+            // - https://www.youtube.com/v/VIDEO_ID
+            const youtubeRegex = /(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/\s]{11})/;
+            const match = url.match(youtubeRegex);
+
+            if (match && match[1]) {
+                const videoId = match[1];
+                // Update: Removed mute=1 to allow sound since user clicked the link (user gesture)
+                // Added playsinline=1 for better mobile behavior
+                embedUrl = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0&playsinline=1`;
             }
-            embedUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
         } else if (url.includes('vimeo.com')) {
-            const videoId = url.split('/').pop().split('?')[0];
-            embedUrl = `https://player.vimeo.com/video/${videoId}?autoplay=1`;
+            // Regex for Vimeo ID
+            const vimeoRegex = /vimeo\.com\/(?:channels\/(?:\w+\/)?|groups\/(?:[^\/]*)\/videos\/|album\/(?:\d+)\/video\/|video\/|)(\d+)(?:$|\/|\?)/;
+            const match = url.match(vimeoRegex);
+
+            if (match && match[1]) {
+                const videoId = match[1];
+                // Removed muted=1 so video plays with sound
+                embedUrl = `https://player.vimeo.com/video/${videoId}?autoplay=1`;
+            }
         }
 
         return embedUrl;
@@ -70,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const url = link.href;
             const embedUrl = getEmbedUrl(url);
             if (embedUrl) {
-                openModal(embedUrl);
+                openModal(embedUrl, url);
             } else {
                 window.open(url, '_blank');
             }

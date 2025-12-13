@@ -67,17 +67,44 @@
         class="fixed top-0 left-0 right-0 z-50 bg-deep-black/80 backdrop-blur-md border-b border-white/5">
         <div class="max-w-7xl mx-auto px-8 py-6 flex items-center justify-between">
             <a href="index.html" class="text-2xl font-serif tracking-wider text-gold">YIGAL PESAHOV</a>
-            <nav class="flex items-center gap-10">
+            <nav class="hidden md:flex items-center gap-10">
                 <a href="index.html"
                     class="text-sm tracking-widest uppercase hover:text-gold transition-colors duration-300">Home</a>
-                <a href="index.html#about"
-                    class="text-sm tracking-widest uppercase hover:text-gold transition-colors duration-300">About</a>
+
                 <a href="index.html#portfolio"
                     class="text-sm tracking-widest uppercase text-gold transition-colors duration-300">Portfolio</a>
+
                 <a href="instagram.html"
                     class="text-sm tracking-widest uppercase hover:text-gold transition-colors duration-300">Instagram</a>
+                <a href="client-area.html"
+                    class="text-sm tracking-widest uppercase hover:text-gold transition-colors duration-300">Client
+                    Area</a>
                 <a href="contact.html"
                     class="text-sm tracking-widest uppercase hover:text-gold transition-colors duration-300">Contact</a>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu"
+            class="hidden md:hidden absolute top-full left-0 right-0 bg-deep-black/95 backdrop-blur-xl border-b border-white/10 p-8 shadow-2xl">
+            <nav class="flex flex-col gap-6 text-center text-lg">
+                <a href="index.html" class="text-white hover:text-gold transition-colors duration-300">Home</a>
+
+                <a href="index.html#portfolio"
+                    class="text-gold hover:text-gold transition-colors duration-300">Portfolio</a>
+
+                <a href="instagram.html" class="text-white hover:text-gold transition-colors duration-300">Instagram</a>
+                <a href="client-area.html" class="text-white hover:text-gold transition-colors duration-300">Client
+                    Area</a>
+                <a href="contact.html" class="text-white hover:text-gold transition-colors duration-300">Contact</a>
             </nav>
         </div>
     </header>
@@ -173,6 +200,7 @@
 
 
     <script src="video-loader.js"></script>
+    <script src="mobile-menu.js"></script>
 </body>
 
 </html>
