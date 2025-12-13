@@ -25,8 +25,10 @@ const translations = {
         'desc_commercials': 'Impactful brand storytelling and commercial productions.',
         'title_love_stories': 'Love Stories',
         'desc_love_stories': 'Short, emotional films celebrating couplehood and romance.',
-        'title_corporate': 'Corporate',
+        'cat_corporate': 'Corporate',
         'desc_corporate': 'Professional corporate films and branding content.',
+        'cat_live_shows': 'Live Shows',
+        'desc_live_shows': 'Spectacular live performances and stage productions.',
 
         // Instagram
         'insta_follow': 'Follow',
@@ -124,6 +126,8 @@ const translations = {
         'desc_love_stories': 'סרטים קצרים ומרגשים החוגגים זוגיות ורומנטיקה.',
         'title_corporate': 'תדמית ועסקים',
         'desc_corporate': 'סרטי תדמית מקצועיים ותוכן שיווקי לעסקים.',
+        'cat_live_shows': 'הופעות חיות',
+        'desc_live_shows': 'הופעות חיות מרהיבות והפקות במה.',
 
         // Instagram
         'insta_follow': 'עקוב',
