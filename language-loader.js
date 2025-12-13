@@ -14,10 +14,10 @@ const translations = {
         'hero_cta': 'Explore Portfolio',
 
         // About / Method
-        'about_subtitle': 'The Method',
-        'about_title': 'Cinematic Storytelling',
-        'about_text_1': 'I do not just film events; I capture the essence of the moment. My approach is rooted in cinema—focusing on raw emotion, perfect lighting, and the unique narrative of your story.',
-        'about_text_2': 'As a director, I craft a visual legacy that is timeless, elegant, and unmistakably yours.',
+        'about_subtitle': 'Cinematic Excellence',
+        'about_title': 'Yigal Pesahov Films',
+        'about_text_1': 'Yigal Pesahov Films is a high-end production company specializing in commercial filmmaking, advertisements, corporate videos, and music video production for globally recognized brands, artists, and elite clients.<br><br>With over 25 years of international experience, we bring cinematic storytelling to the forefront of every project, combining advanced filming techniques, innovative editing, and creative direction to produce compelling and visually striking content.',
+        'about_text_2': '<h3 class="text-gold text-xl font-serif mb-4 mt-8">Why Work with Us?</h3><ul class="space-y-4 list-disc pl-5 marker:text-gold"><li class="pl-2"><strong class="text-white">Comprehensive Filmmaking Expertise</strong> – From concept development to final delivery, we handle the entire production process.</li><li class="pl-2"><strong class="text-white">State-of-the-Art Equipment & Techniques</strong> – Utilizing the latest cinematic gear and innovative filming methods for a polished, high-end result.</li><li class="pl-2"><strong class="text-white">VIP & Global Clientele</strong> – Trusted by international business leaders, renowned artists, and luxury brands.</li><li class="pl-2"><strong class="text-white">Customized, Impactful Storytelling</strong> – Every video is tailored to evoke emotion, drive engagement, and create lasting impressions.</li><li class="pl-2"><strong class="text-white">Worldwide Productions</strong> – Experienced in executing film projects across various locations, adapting to different cultures and industries.</li></ul><p class="mt-8">At Yigal Pesahov Films, we don’t just create videos—we craft immersive cinematic experiences that elevate brands, enhance marketing impact, and leave a lasting impression.</p>',
 
         // Portfolio & Subpages
         'portfolio_subtitle': 'Portfolio',
@@ -119,10 +119,10 @@ const translations = {
         'hero_cta': 'לתיק העבודות',
 
         // About / Method
-        'about_subtitle': 'הגישה שלי',
-        'about_title': 'סיפור קולנועי',
-        'about_text_1': 'אני לא רק מצלם אירועים; אני לוכד את מהות הרגע. הגישה שלי שואבת השראה מהקולנוע—התמקדות ברגש גולמי, תאורה מושלמת והסיפור הייחודי שלכם.',
-        'about_text_2': 'כבמאי, אני יוצר עבורכם מורשת ויזואלית על-זמנית, אלגנטית ובלתי נשכחת.',
+        'about_subtitle': 'מצוינות קולנועית',
+        'about_title': 'יגאל פסחוב הפקות',
+        'about_text_1': 'יגאל פסחוב הפקות היא חברת הפקה יוקרתית המתמחה בקולנוע מסחרי, פרסומות, סרטי תדמית והפקת קליפים למותגים מוכרים עולמית, אמנים ולקוחות אליטה.<br><br>עם למעלה מ-25 שנות ניסיון בינלאומי, אנו מביאים את הסיפור הקולנועי לחזית כל פרויקט, ומשלבים טכניקות צילום מתקדמות, עריכה חדשנית ובימוי יצירתי להפקת תוכן מרתק ומרשים ויזואלית.',
+        'about_text_2': '<h3 class="text-gold text-xl font-serif mb-4 mt-8">למה לעבוד איתנו?</h3><ul class="space-y-4 list-disc pl-5 marker:text-gold"><li class="pl-2"><strong class="text-white">מומחיות קולנועית מקיפה</strong> – מפיתוח הקונספט ועד לסיום, אנו מנהלים את כל תהליך ההפקה.</li><li class="pl-2"><strong class="text-white">ציוד וטכניקות מתקדמות</strong> – שימוש בציוד הקולנועי החדיש ביותר ובשיטות צילום חדשניות לתוצאה מלוטשת ויוקרתית.</li><li class="pl-2"><strong class="text-white">לקוחות VIP ובינלאומיים</strong> – אמונם של מנהיגים עסקיים בינלאומיים, אמנים ידועים ומותגי יוקרה.</li><li class="pl-2"><strong class="text-white">סיפור מותאם אישית ומרגש</strong> – כל סרטון נתפר כדי לעורר רגש, להניע מעורבות וליצור רושם מתמשך.</li><li class="pl-2"><strong class="text-white">הפקות חובקות עולם</strong> – ניסיון בביצוע פרויקטים קולנועיים במגוון לוקיישנים, עם התאמה לתרבויות ותעשיות שונות.</li></ul><p class="mt-8">ביגאל פסחוב הפקות, אנו לא רק יוצרים סרטונים—אנו יוצרים חוויות קולנועיות סוחפות המעצימות מותגים, משפרות את ההשפעה השיווקית ומשאירות רושם בלתי נשכח.</p>',
 
         // Portfolio & Subpages
         'portfolio_subtitle': 'תיק עבודות',
