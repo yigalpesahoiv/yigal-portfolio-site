@@ -36,17 +36,17 @@ const translations = {
         // Services Section
         'services_title': 'Our Services',
         'svc_weddings_title': 'Weddings',
-        'svc_weddings_desc': 'Cinematic documentation of meaningful wedding days with a quiet, precise, and unobtrusive approach. Focus on atmosphere, timing, and real moments as they unfold, shaped through refined cinematic storytelling, elegant editing, and visual depth.',
+        'svc_weddings_desc': 'Our wedding productions are approached with the same standards applied to high-end commercial and cinematic projects. Using advanced cinema cameras, professional audio systems, stabilized motion tools, and refined lighting techniques, we document the day with precision, depth, and visual consistency.<br><br>Each project is filmed with a multi-layered cinematic approach — combining observational shooting, controlled compositions, and high-end post-production workflows to deliver a film that feels polished, immersive, and technically uncompromised.',
         'svc_love_stories_title': 'Love Stories',
-        'svc_love_stories_desc': 'Personal and intimate films created with sensitivity and restraint. Approached as cinematic pieces that focus on connection, presence, and shared moments, allowing authenticity to guide the narrative.',
+        'svc_love_stories_desc': 'Personal films produced with the full cinematic toolkit. These projects combine controlled cinematography, intentional framing, professional sound capture, and advanced color grading to create intimate yet visually powerful films.<br><br>Our technical approach allows the story to remain natural, while the production quality remains at the highest professional level.',
         'svc_commercials_title': 'Commercials',
-        'svc_commercials_desc': 'High-end commercial films for brands seeking strong visual identity and storytelling. From concept development to final delivery, each project balances cinematic aesthetics with clear messaging and emotional impact.',
+        'svc_commercials_desc': 'High-end commercial film production for brands that demand precision, consistency, and visual excellence. We work with industry-leading cinema equipment, advanced lighting setups, motion systems, and professional crews to produce commercials that meet global broadcast and digital standards.<br><br>From concept development through final delivery, every stage is handled with technical accuracy, creative direction, and strict quality control.',
         'svc_corporate_title': 'Corporate',
-        'svc_corporate_desc': 'Corporate films that feel human, polished, and visually elevated. Designed for companies and organizations looking to present their story, values, or vision through a cinematic and professional lens.',
+        'svc_corporate_desc': 'Corporate films created with a cinematic production mindset. We apply the same filming standards used in commercial productions — including professional lighting design, clean audio capture, stabilized camera movement, and advanced post-production workflows.<br><br>The result is corporate content that feels credible, refined, and visually authoritative.',
         'svc_music_videos_title': 'Music Videos',
-        'svc_music_videos_desc': 'Cinematic music video production for artists and labels who value atmosphere, rhythm, and visual identity. Each project translates sound and mood into a strong visual language with creative direction and cinematic flow.',
+        'svc_music_videos_desc': 'Cinematic music video production combining creative direction with advanced technical execution. Using high-end cameras, dynamic motion systems, controlled lighting environments, and rhythm-based editing techniques, we translate sound into a strong visual language.<br><br>Each music video is developed as a complete cinematic project, from pre-production planning to final color and sound mastering.',
         'svc_live_shows_title': 'Live Shows',
-        'svc_live_shows_desc': 'Cinematic documentation of live performances and large-scale events. Focused on energy, scale, and emotion — capturing not only what happens on stage, but the experience itself.',
+        'svc_live_shows_desc': 'Professional cinematic documentation of live performances and large-scale events. We operate multi-camera setups, professional audio recording, and advanced stabilization systems to capture performances with clarity, energy, and scale.<br><br>The focus is on delivering technically reliable, visually dynamic footage that preserves the intensity of the live experience.',
 
 
         // Instagram
@@ -154,17 +154,17 @@ const translations = {
         // Services Section
         'services_title': 'השירותים שלנו',
         'svc_weddings_title': 'חתונות',
-        'svc_weddings_desc': 'תיעוד קולנועי של ימי חתונה משמעותיים בגישה שקטה, מדויקת ובלתי מורגשת. התמקדות באווירה, תזמון ורגעים אמיתיים בזמן התרחשותם, המעוצבים באמצעות סיפור קולנועי מעודן, עריכה אלגנטית ועומק ויזואלי.',
-        'svc_love_stories_title': 'סיפורי אהבה',
-        'svc_love_stories_desc': 'סרטים אישיים ואינטימיים הנוצרים ברגישות ואיפוק. גישה קולנועית המתמקדת בחיבור, נוכחות ורגעים משותפים, המאפשרת לאותנטיות להוביל את הנרטיב.',
+        'svc_weddings_desc': 'הפקות חתונה בגישה קולנועית מקצועית, תוך שימוש בציוד צילום קולנועי מתקדם, מערכות סאונד מקצועיות, אמצעי ייצוב, ותאורה מדויקת.<br><br>כל פרויקט מצולם בסטנדרטים הנהוגים בהפקות מסחריות, עם הקפדה על איכות טכנית, רציפות ויזואלית ועריכה קולנועית מתקדמת.',
+        'svc_love_stories_title': 'סיפורים אישיים',
+        'svc_love_stories_desc': 'סרטים אישיים המופקים בכלים קולנועיים מלאים. שילוב של צילום מוקפד, קומפוזיציה מדויקת, סאונד איכותי וגריידינג מתקדם – מאפשר יצירה אינטימית מבלי להתפשר על רמה מקצועית.',
         'svc_commercials_title': 'פרסומות',
-        'svc_commercials_desc': 'סרטי פרסומת יוקרתיים למותגים המחפשים זהות ויזואלית חזקה וסיפור. מפיתוח הקונספט ועד למסירה הסופית, כל פרויקט מאזן אסתטיקה קולנועית עם מסר ברור והשפעה רגשית.',
-        'svc_corporate_title': 'תדמית ועסקים',
-        'svc_corporate_desc': 'סרטי תדמית שמרגישים אנושיים, מלוטשים ומוגבהים ויזואלית. מיועדים לחברות וארגונים המעוניינים להציג את הסיפור, הערכים או החזון שלהם דרך עדשה קולנועית ומקצועית.',
-        'svc_music_videos_title': 'וידאו קליפ',
-        'svc_music_videos_desc': 'הפקת קליפים קולנועיים לאמנים ולייבלים המעריכים אווירה, קצב וזהות ויזואלית. כל פרויקט מתרגם סאונד ומצב רוח לשפה ויזואלית חזקה עם ניהול קריאייטיבי וזרימה קולנועית.',
+        'svc_commercials_desc': 'הפקת סרטים מסחריים ברמה גבוהה למותגים ולקוחות מובילים. עבודה עם ציוד קולנועי מהשורה הראשונה, מערכי תאורה מתקדמים, צוותים מקצועיים ותהליכי הפקה מוקפדים – משלב הרעיון ועד למסירה.',
+        'svc_corporate_title': 'חברות',
+        'svc_corporate_desc': 'סרטים לחברות וארגונים בגישה קולנועית מלאה. הפקה מקצועית הכוללת תאורה נכונה, צילום יציב, סאונד נקי ועריכה מדויקת, ליצירת תכנים אמינים, חדים ובעלי נוכחות.',
+        'svc_music_videos_title': 'קליפים',
+        'svc_music_videos_desc': 'קליפים מוזיקליים בהפקה קולנועית מלאה. שימוש בטכניקות צילום מתקדמות, תנועה, תאורה ועריכה קצבית – ליצירת זהות חזותית חזקה ועקבית עם המוזיקה.',
         'svc_live_shows_title': 'הופעות חיות',
-        'svc_live_shows_desc': 'תיעוד קולנועי של הופעות חיות ואירועים רחבי היקף. התמקדות באנרגיה, גודל ורגש — לכידת לא רק מה שקורה על הבמה, אלא החוויה עצמה.',
+        'svc_live_shows_desc': 'תיעוד קולנועי מקצועי של הופעות ואירועים חיים. מערכי צילום מרובי מצלמות, הקלטת סאונד איכותית ואמצעי ייצוב מתקדמים – לתוצאה אמינה, חדה ודינמית.',
 
 
         // Instagram
