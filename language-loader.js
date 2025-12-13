@@ -9,8 +9,8 @@ const translations = {
 
         // Hero (Home)
         'hero_subtitle': 'International Filmmaker & Director',
-        'hero_title': 'Cinematic Excellence<br>Worldwide',
-        'hero_description': 'Luxury filmmaking, storytelling and high-end productions across the globe.',
+        'hero_title': 'Yigal Pesahov Films',
+        'hero_description': 'We tell stories through cinematic visuals. With a global team of leading filmmakers, we bring precision, innovation, and uncompromising production standards to commercial films, brand campaigns, and meaningful events worldwide.<br><br>Every moment is approached as a story — crafted with care, detail, and a commitment to excellence, wherever the production takes place.',
         'hero_cta': 'Explore Portfolio',
 
         // About / Method
@@ -132,8 +132,8 @@ const translations = {
 
         // Hero
         'hero_subtitle': 'במאי ויוצר סרטים בינלאומי',
-        'hero_title': 'מצוינות קולנועית<br>חובקת עולם',
-        'hero_description': 'הפקות יוקרה, סיפורים ויצירה קולנועית ברמה הגבוהה ביותר ברחבי העולם.',
+        'hero_title': 'Yigal Pesahov Films',
+        'hero_description': 'אנו מספרים סיפורים באמצעות שפה חזותית קולנועית. בעזרת צוות בינלאומי של יוצרים קולנועיים מובילים, אנו מביאים דיוק, חדשנות וסטנדרטים בלתי מתפשרים להפקות מסחריות, קמפיינים למותגים ואירועים משמעותיים ברחבי העולם.<br><br>כל רגע ניגש כסיפור בפני עצמו — מעובד בקפידה, עם תשומת לב לפרטים ומחויבות מלאה לאיכות, בכל מקום שבו ההפקה מתקיימת.',
         'hero_cta': 'לתיק העבודות',
 
         // About / Method
