@@ -262,8 +262,8 @@ function setLanguage(lang) {
 document.addEventListener('DOMContentLoaded', () => {
     // Check saved preference or browser default
     const savedLang = localStorage.getItem('preferred_language');
-    const browserLang = navigator.language.startsWith('he') ? 'he' : 'en';
-    const initialLang = savedLang || browserLang;
+    // Default to English regardless of browser settings (International focus)
+    const initialLang = savedLang || 'en';
 
     setLanguage(initialLang);
 
